@@ -1,5 +1,6 @@
 {
     "name": "bibekshakyeah/binshop-laravel-blog",
+    "version": "1.0.0",
     "keywords": [
         "laravel",
         "blog",
@@ -58,4 +59,5 @@
             }
         }
     }
+    
 }
