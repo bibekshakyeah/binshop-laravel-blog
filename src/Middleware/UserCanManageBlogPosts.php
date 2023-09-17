@@ -19,11 +19,11 @@ class UserCanManageBlogPosts
      */
     public function handle($request, Closure $next)
     {
-        if (!\Auth('admin')::check()) {
+        if (!auth('admin')::check()) {
             abort(401,"User not authorised to manage blog posts: You are not logged in");
             return redirect('/login');
         }
-        if (!\Auth('admin')->canManageBinshopsBlogPosts()) {
+        if (!auth('admin')->canManageBinshopsBlogPosts()) {
             abort(401,"User not authorised to manage blog posts: Your account is not authorised to edit blog posts");
         }
         return $next($request);
